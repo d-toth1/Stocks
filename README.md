@@ -3,7 +3,7 @@ This code is a start-up built purely on Python 3.x to organize, visualize, manip
 
 ## Authors
 * David W. Toth (dtoth1@nd.edu), Co-founder
-* Jonathan D. Burns (jonaburns@iu.edu), Co-founder
+* Jonathan D. Burns (jonaburn@iu.edu), Co-founder
 
 ## License: MIT License  
-You agree to the terms listed under LICENSE 
+You agree to the terms listed under LICENSE
