@@ -1,15 +1,24 @@
-""" Script imports stock data and presents
-	them as graphs """
+''' Script imports stock data and presents
+	them as graphs '''
 
 import time
 import datetime as dt
-now = dt.datetime.now()
-t0 = time.clock()
-#Imports packages
+
+''' Import Packages '''
 import pandas as pd
+import pandas_datareader.data as pdr
 import numpy as np
 import matplotlib.pyplot as plt
 print("Packages imported")
-t1 = time.clock()
-total_time = t1-t0
-print("Script time:", total_time)
+
+''' Import Stock Data from Robinhood '''
+aapl = pdr.get_data_robinhood('AAPL', start=dt.datetime(2017, 6, 20), end=dt.datetime(2018, 6, 20))
+del aapl['session']
+
+''' Plot past year of data '''
+aapl= aapl.astype(float)
+aapl['close_price'].plot()
+plt.xlabel('Time')
+plt.ylabel('Price')
+plt.title('AAPL Closing Prices')
+plt.show()
