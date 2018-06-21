@@ -1,5 +1,7 @@
-''' Script imports stock data and presents
+''' Overview: Script imports stock data and presents
 	them as graphs '''
+
+''' To do: Add function and/or for loops to analyze several stocks at once '''
 
 import time
 import datetime as dt
@@ -17,7 +19,7 @@ aapl = pdr.get_data_robinhood('AAPL', start=dt.datetime(2017, 6, 20), end=dt.dat
 del aapl['session']
 
 ''' Export data '''
-aapl.to_csv('aapl.csv')
+# aapl.to_csv('aapl.csv')
 
 ''' Plot past year of data '''
 aapl= aapl.astype(float)
