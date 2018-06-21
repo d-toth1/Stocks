@@ -21,4 +21,8 @@ aapl['close_price'].plot()
 plt.xlabel('Time')
 plt.ylabel('Price')
 plt.title('AAPL Closing Prices')
+
+print(dt.datetime.now())
+print('Created by D.W. Toth and J.D. Burns')
+
 plt.show()
