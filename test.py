@@ -1,3 +1,7 @@
+""" Script that functionally sorts through all
+	possible stock tickers in the world-wide stock market.
+	Writes tickers to a file if they exist in the database specified. """
+	
 import time
 import datetime as dt
 import pandas as pd
