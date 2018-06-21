@@ -15,6 +15,10 @@ print("Packages imported")
 aapl = pdr.get_data_robinhood('AAPL', start=dt.datetime(2017, 6, 20), end=dt.datetime(2018, 6, 20))
 del aapl['session']
 
+''' Export data '''
+aapl.to_csv('aapl.csv')
+print('Data Exported')
+
 ''' Plot past year of data '''
 aapl= aapl.astype(float)
 aapl['close_price'].plot()
