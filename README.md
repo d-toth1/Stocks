@@ -1,5 +1,5 @@
 # Stocks
-This code is a start-up built purely on Python 3.x to organize, visualize, manipulate, and predict stock market values and data.
+Python-built data analysis tool for finance, but more specifically for stocks. 
 
 ## Authors
 * David W. Toth (dtoth1@nd.edu), Co-founder
