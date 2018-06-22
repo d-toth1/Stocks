@@ -21,8 +21,8 @@ etf_list = df_xlsx['Ticker'].tolist()
 list = df['Ticker'].tolist()
 for i in list:
 	tickers.append(str(i))
-for etf in etf_list:
-	etf.append(str(etf))
+for i in etf_list:
+	etf.append(str(i))
 # print(tickers)
 print("# of Tickers:", len(tickers))
 def function(tickers):
@@ -62,7 +62,7 @@ def function2(etf):
 			print("Failed")
 			pass
 
-data = function(tickers)
+# data = function(tickers)
 data2 = function2(etf)
-print(data)
+# print(data)
 print(data2)
