@@ -6,15 +6,9 @@ Python-built data analysis tool for finance, but more specifically for stocks.
 * Jonathan D. Burns (jonaburn@iu.edu), Co-founder
 
 ## Prerequisites
-<<<<<<< HEAD
 ```
 pip install numpy, matplotlib, scipy, scikit-learn, pandas, pandas-datareader, pillow, openpyxl
 ```
-=======
-'''
-pip install numpy, matplotlib, scipy, scikit-learn, pandas, pandas-datareader, pillow, openpyxl
-'''
->>>>>>> 6fd17ad05e54589644e5778317637dafcb415a6f
 
 ## License: MIT License  
 By using this software, you agree to the terms listed under LICENSE
