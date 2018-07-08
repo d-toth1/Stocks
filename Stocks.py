@@ -20,14 +20,23 @@ class Stocks:
 		self.TestNotification = Button(master, text = "IFTTT Test", command = self.Notify)
 		self.TestNotification.configure(width=10)
 		self.TestNotification.pack()
-		img = 'C:/Users/david/OneDrive/Pictures/Capture.PNG'
-		self.window_image = ImageTk.PhotoImage(Image.open(img))
+		self.img = 'C:/Users/david/OneDrive/Pictures/Capture.PNG'
+		self.window_image = ImageTk.PhotoImage(Image.open(self.img))
 		self.window_image_label = Label(master, image = self.window_image)
 		self.window_image_label.configure(background='white')
 		self.window_image_label.pack()
 
 	def ImportStocks(self):
-		pass
+		etf_path = "C:/Users/david/Stocks/Data/etfworking.xlsx"
+		ticker_path = "C:/Users/david/Stocks/Data/workingtickers.xlsx"
+		tickerxlsx = pd.ExcelFile(ticker_path)
+		tickers = pd.read_excel(tickerxlsx)
+		etfxlsx = pd.ExcelFile(etf_path)
+		etfs = pd.read_excel(etfxlsx)
+		ticker_list = tickers['TICKER'].tolist()
+		etf_list = etfs['ETF'].tolist()
+		print(ticker_list)
+		print(etf_list)
 
 	def ViewTrends(self):
 		pass
@@ -39,11 +48,11 @@ class Stocks:
 		david_url = 'https://maker.ifttt.com/trigger/test_event/with/key/dEd4zv7UNm4oLjt1tIqQza'
 		jonathan_url = 'https://maker.ifttt.com/trigger/test_event/with/key/noHcDtIOVbiAOOIuVCLC-zPpp4rf1A5dbLiEex5qbaW'
 		requests.post(david_url)
-		# requests.post(jonathan_url)
+		requests.post(jonathan_url)
 		messagebox.showinfo(title="Test Notification", message = "Notification sent to mobile app")
 
 root = Tk ()
 GUI = Stocks(root)
 root.configure(background = 'white')
-root.geometry('250x250')
+root.geometry('400x400')
 root.mainloop()
