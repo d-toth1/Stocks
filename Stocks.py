@@ -20,11 +20,11 @@ class Stocks:
 		self.TestNotification = Button(master, text = "IFTTT Test", command = self.Notify)
 		self.TestNotification.configure(width=10)
 		self.TestNotification.pack()
-		self.img = 'C:/Users/david/OneDrive/Pictures/Capture.PNG'
-		self.window_image = ImageTk.PhotoImage(Image.open(self.img))
-		self.window_image_label = Label(master, image = self.window_image)
-		self.window_image_label.configure(background='white')
-		self.window_image_label.pack()
+		# self.img = 'C:/Users/david/OneDrive/Pictures/Capture.PNG'
+		# self.window_image = ImageTk.PhotoImage(Image.open(self.img))
+		# self.window_image_label = Label(master, image = self.window_image)
+		# self.window_image_label.configure(background='white')
+		# self.window_image_label.pack()
 
 	def ImportStocks(self):
 		etf_path = "C:/Users/david/Stocks/Data/etfworking.xlsx"

@@ -5,7 +5,12 @@ Python-built data analysis tool for finance, but more specifically for stocks.
 * David W. Toth (dtoth1@nd.edu), Co-founder
 * Jonathan D. Burns (jonaburn@iu.edu), Co-founder
 
-## Prerequisites
+## Installation
+* Cloning
+```
+git clone https://github.com/d-toth1/Stocks.git
+```
+* Prerequisites
 ```
 pip install numpy, matplotlib, scipy, scikit-learn, pandas, pandas-datareader, pillow, openpyxl
 ```
