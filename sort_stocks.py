@@ -1,13 +1,10 @@
-""" Script that functionally sorts through all
-	possible stock tickers in the world-wide stock market.
-	Writes tickers to a file if they exist in the database specified (Robinhood). """
+"""
+Script that functionally sorts through all
+possible stock tickers in the world-wide stock market.
+Writes tickers to a file if they exist in the database specified (Robinhood). 
+"""
 
-import time
-import datetime as dt
-import pandas as pd
-import pandas_datareader.data as web
-import numpy as np
-import matplotlib.pyplot as plt
+from imports import *
 
 path = 'C:/Users/david/Documents/tickers.xlsx'
 tickers = []
@@ -66,6 +63,6 @@ def get_etf(etf):
 			pass
 
 # ticker_data = get_ticker(tickers)
-etf_data = get_etf(etf)
+# etf_data = get_etf(etf)
 # print(ticker_data)
-print(etf_data)
+# print(etf_data)
