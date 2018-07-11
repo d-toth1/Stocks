@@ -1,17 +1,22 @@
 import os
 import time
-import datetime as dt
 import requests
+import smtplib
+from time import sleep
+from tqdm import tqdm, trange
+import datetime as dt
 import glob as gl
-import pandas as pd #pip install pandas
-from pandas import ExcelWriter #pip install pandas
-import pandas_datareader as pdr #pip install pandas-datareader
-from openpyxl import load_workbook #pip install openpyxl
-import numpy as np #pip install numpy
-import matplotlib.pyplot as plt #pip install matplotlib
-import sklearn as sk #pip install scikit-learn
+import pandas as pd
+from pandas import ExcelWriter
+import pandas_datareader as pdr
+from openpyxl import load_workbook
+import numpy as np
+import matplotlib.pyplot as plt
+import sklearn as sk
 from tkinter import *
 from tkinter import messagebox
-from PIL import ImageTk, Image #pip install pillow
+from tkinter.ttk import *
+from PIL import ImageTk, Image
 import sqlite3 as sq
+import progressbar as pg
 print("Imports successful")
