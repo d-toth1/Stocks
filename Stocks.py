@@ -9,10 +9,20 @@ root.columnconfigure(1, weight=1)
 root.columnconfigure(2, weight=1)
 root.columnconfigure(3, weight=1)
 
-user = ''
-password = ''
-david = ''
-jonathan = ''
+user = input('Gmail:')
+password = input('Password:')
+phone_number = input("Phone number:")
+carrier = input("Phone carrier (ATT, Verizon):")
+
+if carrier == "ATT":
+	number = phone_number + '@txt.att.net'
+else:
+	pass
+if carrier == 'Verizon':
+	number = phone_number + '@vtext.com'
+	print(number)
+else:
+	pass
 
 class Stocks:
 	def __init__(self, root):
@@ -46,8 +56,7 @@ class Stocks:
 		etfs = pd.read_excel(etfxlsx)
 		ticker_list = tickers['TICKER'].tolist()
 		etf_list = etfs['ETF'].tolist()
-		print(ticker_list)
-		print(etf_list)
+		messagebox.showinfo(title="Stocks Imported", message="All stocks have been imported.")
 
 	def ViewTrends(self):
 		pass
@@ -65,9 +74,9 @@ class Stocks:
 		# self.ProgressBar.stop()
 		server = smtplib.SMTP('smtp.gmail.com:587')
 		server.starttls()
-		server.login(user, password)
-		server.sendmail(user, '', 'Hello')
-		server.sendmail(user, jonathan, 'Hello, Jonathan. This message is sent from Python. - David')
+		server.login(str(user), str(password))
+		# server.sendmail(str(user), '', 'Hello')
+		server.sendmail(str(user), str(number), 'Hello, Jonathan. This message is sent from Python. - David')
 		server.quit()
 
 GUI = Stocks(root)
