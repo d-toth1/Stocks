@@ -12,7 +12,7 @@ git clone https://github.com/d-toth1/Stocks.git
 ```
 * Prerequisites
 ```
-pip install numpy, matplotlib, scipy, scikit-learn, pandas, pandas-datareader, pillow, openpyxl
+pip install numpy matplotlib scipy scikit-learn pandas pandas-datareader pillow openpyxl
 ```
 
 ## License: MIT License  
